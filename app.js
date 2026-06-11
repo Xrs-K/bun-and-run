@@ -58,5 +58,10 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// SMIL doesn't respect prefers-reduced-motion on its own
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.mascot animateTransform').forEach(el => el.remove());
+}
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
