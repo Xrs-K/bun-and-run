@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Archived: first version of the animated Bun&Run mascot (single-segment swinging legs).
+     Open this file directly in a browser to see it. Superseded by the v2 mascot in index.html. -->
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { background: #121212; display: grid; place-items: center; min-height: 100vh; }
+  .mascot { width: 220px; overflow: visible; }
+  .mascot .m-line { fill: none; stroke: #ffe600; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+  .mascot .m-seed { fill: #ffe600; }
+  .mascot .leg { fill: none; stroke: #fff; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; }
+  .mascot .leg-back { transform-box: view-box; transform-origin: 92px 178px; animation: kickBack .42s ease-in-out infinite alternate; }
+  .mascot .leg-front { transform-box: view-box; transform-origin: 128px 178px; animation: kickFront .42s ease-in-out infinite alternate; }
+  @keyframes kickFront { from { transform: rotate(-28deg); } to { transform: rotate(26deg); } }
+  @keyframes kickBack { from { transform: rotate(24deg); } to { transform: rotate(-30deg); } }
+  .mascot .m-body { animation: bob .42s ease-in-out infinite alternate; }
+  @keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+  .mascot .m-speed line { stroke: #ffe600; stroke-width: 7; stroke-linecap: round; opacity: 0; animation: whoosh .84s ease-out infinite; }
+  .mascot .m-speed line:nth-child(2) { animation-delay: .2s; }
+  .mascot .m-speed line:nth-child(3) { animation-delay: .4s; }
+  @keyframes whoosh {
+    0% { opacity: 0; transform: translateX(26px); }
+    30% { opacity: .8; }
+    100% { opacity: 0; transform: translateX(-30px); }
+  }
+</style>
+</head>
+<body>
+<svg class="mascot" viewBox="0 0 220 244" aria-hidden="true">
+  <g class="m-legs">
+    <path class="leg leg-back" d="M92 178 C88 194 78 202 62 209" />
+    <path class="leg leg-front" d="M128 178 C134 194 135 208 129 220 L149 222" />
+  </g>
+  <g class="m-body">
+    <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
+    <circle class="m-seed" cx="78" cy="62" r="3.2"/>
+    <circle class="m-seed" cx="112" cy="50" r="3.2"/>
+    <circle class="m-seed" cx="146" cy="64" r="3.2"/>
+    <circle class="m-seed" cx="96" cy="78" r="3.2"/>
+    <circle class="m-seed" cx="132" cy="80" r="3.2"/>
+    <path class="m-line" d="M30 116 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0" />
+    <rect class="m-line" x="26" y="130" width="168" height="14" rx="7" />
+    <rect class="m-line" x="34" y="158" width="152" height="18" rx="9" />
+  </g>
+  <g class="m-speed">
+    <line x1="-2" y1="120" x2="-34" y2="120" />
+    <line x1="-8" y1="146" x2="-48" y2="146" />
+    <line x1="-2" y1="172" x2="-30" y2="172" />
+  </g>
+</svg>
+</body>
+</html>

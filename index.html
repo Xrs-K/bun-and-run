@@ -48,10 +48,22 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
 
-        <svg class="mascot mascot-hero" viewBox="0 0 220 244" aria-hidden="true">
+        <svg class="mascot mascot-hero" viewBox="0 0 220 250" aria-hidden="true">
           <g class="m-legs">
-            <path class="leg leg-back" d="M92 178 C88 194 78 202 62 209" />
-            <path class="leg leg-front" d="M128 178 C134 194 135 208 129 220 L149 222" />
+            <g class="thigh thigh-b">
+              <line class="leg" x1="95" y1="170" x2="89" y2="196"/>
+              <g class="shin shin-b">
+                <line class="leg" x1="89" y1="196" x2="84" y2="220"/>
+                <line class="leg" x1="84" y1="220" x2="101" y2="222"/>
+              </g>
+            </g>
+            <g class="thigh thigh-f">
+              <line class="leg" x1="126" y1="170" x2="131" y2="196"/>
+              <g class="shin shin-f">
+                <line class="leg" x1="131" y1="196" x2="128" y2="220"/>
+                <line class="leg" x1="128" y1="220" x2="146" y2="222"/>
+              </g>
+            </g>
           </g>
           <g class="m-body">
             <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
@@ -95,10 +107,22 @@
           <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
           <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
         </div>
-        <svg class="mascot runner" viewBox="0 0 220 244" aria-hidden="true">
+        <svg class="mascot runner" viewBox="0 0 220 250" aria-hidden="true">
           <g class="m-legs">
-            <path class="leg leg-back" d="M92 178 C88 194 78 202 62 209" />
-            <path class="leg leg-front" d="M128 178 C134 194 135 208 129 220 L149 222" />
+            <g class="thigh thigh-b">
+              <line class="leg" x1="95" y1="170" x2="89" y2="196"/>
+              <g class="shin shin-b">
+                <line class="leg" x1="89" y1="196" x2="84" y2="220"/>
+                <line class="leg" x1="84" y1="220" x2="101" y2="222"/>
+              </g>
+            </g>
+            <g class="thigh thigh-f">
+              <line class="leg" x1="126" y1="170" x2="131" y2="196"/>
+              <g class="shin shin-f">
+                <line class="leg" x1="131" y1="196" x2="128" y2="220"/>
+                <line class="leg" x1="128" y1="220" x2="146" y2="222"/>
+              </g>
+            </g>
           </g>
           <g class="m-body">
             <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
@@ -300,11 +324,6 @@
           <span class="order-name">210 603 1310</span>
           <span class="order-go">Τηλεφώνησε →</span>
         </a>
-        <a class="order-card reveal" href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">
-          <img class="order-logo" src="assets/instagram.svg" alt="Instagram">
-          <span class="order-name">@bun_n_run</span>
-          <span class="order-go">Ακολούθησέ μας →</span>
-        </a>
       </div>
     </section>
 
@@ -321,7 +340,11 @@
               <span class="hours"><span>Δευτέρα</span><span class="closed">Κλειστά</span></span>
               <span class="hours"><span>Τρίτη – Κυριακή</span><span>13:00 – 23:30</span></span>
             </li>
-            <li><strong>Instagram</strong><a href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">@bun_n_run</a></li>
+            <li><strong>Instagram</strong>
+              <a class="insta-link" href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">
+                <img src="assets/instagram.svg" alt="">@bun_n_run
+              </a>
+            </li>
           </ul>
         </div>
         <div class="info-map reveal">
@@ -337,7 +360,38 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <img class="footer-logo" src="assets/logo.jpg" alt="Bun&Run logo">
+      <div class="footer-lockup" aria-label="Bun&Run">
+        <div class="lockup-text">BUN<br><span class="amp">&amp;</span>RUN</div>
+        <svg class="mascot mascot-footer" viewBox="0 0 220 250" aria-hidden="true">
+          <g class="m-legs">
+            <g class="thigh thigh-b">
+              <line class="leg" x1="95" y1="170" x2="89" y2="196"/>
+              <g class="shin shin-b">
+                <line class="leg" x1="89" y1="196" x2="84" y2="220"/>
+                <line class="leg" x1="84" y1="220" x2="101" y2="222"/>
+              </g>
+            </g>
+            <g class="thigh thigh-f">
+              <line class="leg" x1="126" y1="170" x2="131" y2="196"/>
+              <g class="shin shin-f">
+                <line class="leg" x1="131" y1="196" x2="128" y2="220"/>
+                <line class="leg" x1="128" y1="220" x2="146" y2="222"/>
+              </g>
+            </g>
+          </g>
+          <g class="m-body">
+            <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
+            <circle class="m-seed" cx="78" cy="62" r="3.2"/>
+            <circle class="m-seed" cx="112" cy="50" r="3.2"/>
+            <circle class="m-seed" cx="146" cy="64" r="3.2"/>
+            <circle class="m-seed" cx="96" cy="78" r="3.2"/>
+            <circle class="m-seed" cx="132" cy="80" r="3.2"/>
+            <path class="m-line" d="M30 116 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0" />
+            <rect class="m-line" x="26" y="130" width="168" height="14" rx="7" />
+            <rect class="m-line" x="34" y="158" width="152" height="18" rx="9" />
+          </g>
+        </svg>
+      </div>
       <p>Smash burgers &amp; cocktails στην Παλλήνη.</p>
       <div class="footer-links">
         <a href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">Instagram</a>

@@ -74,12 +74,29 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
 .mascot .m-line { fill: none; stroke: var(--yellow); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
 .mascot .m-seed { fill: var(--yellow); }
 .mascot .leg { fill: none; stroke: #fff; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; }
-.mascot .leg-back { transform-box: view-box; transform-origin: 92px 178px; animation: kickBack .42s ease-in-out infinite alternate; }
-.mascot .leg-front { transform-box: view-box; transform-origin: 128px 178px; animation: kickFront .42s ease-in-out infinite alternate; }
-@keyframes kickFront { from { transform: rotate(-28deg); } to { transform: rotate(26deg); } }
-@keyframes kickBack { from { transform: rotate(24deg); } to { transform: rotate(-30deg); } }
-.mascot .m-body { animation: bob .42s ease-in-out infinite alternate; }
-@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+.mascot .thigh, .mascot .shin { transform-box: view-box; }
+.mascot .thigh { animation: thighSwing .6s linear infinite; }
+.mascot .shin { animation: shinSwing .6s linear infinite; }
+.mascot .thigh-f { transform-origin: 126px 170px; }
+.mascot .shin-f { transform-origin: 131px 196px; }
+.mascot .thigh-b { transform-origin: 95px 170px; animation-delay: -.3s; }
+.mascot .shin-b { transform-origin: 89px 196px; animation-delay: -.3s; }
+/* Run cycle: 0% leg fully back, 50% fully front. The knee bends hardest
+   mid swing-through and extends as the foot reaches forward. */
+@keyframes thighSwing {
+  0%   { transform: rotate(34deg); }
+  50%  { transform: rotate(-38deg); }
+  100% { transform: rotate(34deg); }
+}
+@keyframes shinSwing {
+  0%   { transform: rotate(46deg); }
+  25%  { transform: rotate(64deg); }
+  50%  { transform: rotate(6deg); }
+  75%  { transform: rotate(3deg); }
+  100% { transform: rotate(46deg); }
+}
+.mascot .m-body { animation: bob .3s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-5px); } }
 .mascot .m-speed line { stroke: var(--yellow); stroke-width: 7; stroke-linecap: round; opacity: 0; animation: whoosh 0.84s ease-out infinite; }
 .mascot .m-speed line:nth-child(2) { animation-delay: .2s; }
 .mascot .m-speed line:nth-child(3) { animation-delay: .4s; }
@@ -101,7 +118,7 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(18,18,18,.62) 0%, rgba(18,18,18,.78) 60%, var(--black) 100%);
 }
-.hero-content { position: relative; z-index: 2; padding: 6.5rem 5vw 4rem; max-width: 1000px; width: 100%; }
+.hero-content { position: relative; z-index: 2; padding: 6.5rem 5vw 7.5rem; max-width: 1000px; width: 100%; }
 .hero-kicker { font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; color: var(--yellow); margin-bottom: 1.1rem; }
 .hero-title { font-size: clamp(2.6rem, 9.5vw, 7.5rem); }
 .hero-title .line { display: block; overflow: hidden; }
@@ -123,6 +140,7 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
   background: var(--yellow); animation: scrollDown 1.8s ease-in-out infinite;
 }
 @keyframes scrollDown { 60%, 100% { top: 100%; } }
+@media (max-height: 760px) { .hero-scroll { display: none; } }
 
 /* ---------- Marquee ---------- */
 .marquee-wrap { overflow: hidden; padding: 1.1rem 0; }
@@ -289,6 +307,8 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
   color: var(--yellow); margin-bottom: .3rem;
 }
 .info-list a { border-bottom: 1px solid var(--yellow); }
+.info-list a.insta-link { border-bottom: none; display: inline-flex; align-items: center; gap: .55rem; font-weight: 700; }
+.insta-link img { width: 24px; height: 24px; }
 .hours { display: flex; justify-content: space-between; max-width: 320px; }
 .hours .closed { color: #ff5e5e; font-weight: 600; }
 .info-map iframe { width: 100%; height: 420px; border: 0; border-radius: 18px; filter: grayscale(.3) contrast(1.05); }
@@ -296,7 +316,13 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid #262626; padding: 3.5rem 5vw; text-align: center; }
 .footer-inner { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
-.footer-logo { width: 150px; border-radius: 12px; }
+.footer-lockup { display: flex; align-items: center; gap: 1.1rem; }
+.lockup-text {
+  font-family: var(--display); font-size: 2.3rem; line-height: .92;
+  text-align: left; letter-spacing: .01em;
+}
+.lockup-text .amp { color: var(--yellow); }
+.mascot-footer { width: 84px; }
 .footer-inner > p { color: var(--muted); font-size: .95rem; }
 .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; justify-content: center; margin-top: .5rem; }
 .footer-links a { font-weight: 700; font-size: .9rem; color: var(--muted); transition: color .25s; }
