@@ -179,6 +179,9 @@ h1, h2, h3 { font-family: var(--display); text-transform: uppercase; line-height
   position: sticky; top: 56px; z-index: 60;
   background: rgba(26,26,26,.94); backdrop-filter: blur(10px);
   margin: 0 -5vw 2.2rem; padding: .8rem 5vw;
+  /* .section-dark > * caps children at 1200px; combined with the -5vw
+     full-bleed margins that pinned the bar to the left on wide screens */
+  max-width: none;
 }
 .tabs {
   display: flex; gap: .55rem; flex-wrap: nowrap; overflow-x: auto;
