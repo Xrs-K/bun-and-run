@@ -30,12 +30,20 @@ window.addEventListener('scroll', () => {
 // Menu tabs
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
+const tabsWrap = document.getElementById('tabsWrap');
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     tabs.forEach(t => t.classList.remove('active'));
     panels.forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     document.querySelector(`.panel[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+    tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    // If the user is deep in a long list, jump back to the top of the panel
+    const panelsTop = document.getElementById('menuPanels').getBoundingClientRect().top;
+    const tabsBottom = tabsWrap.getBoundingClientRect().bottom;
+    if (panelsTop < tabsBottom) {
+      window.scrollTo({ top: window.scrollY + panelsTop - tabsBottom - 12, behavior: 'instant' });
+    }
   });
 });
 

@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bun&Run — Smash Burgers & Cocktails | Παλλήνη</title>
-  <meta name="description" content="Bun&Run: Smash burgers με τραγανές άκρες, fried chicken και cocktails στην Παλλήνη. Λεωφ. Μαραθώνος 77. Delivery μέσω Wolt, efood & BOX.">
+  <meta name="description" content="Bun&Run: Ζουμερά smash burgers με τραγανές άκρες, fried chicken και signature cocktails στην Παλλήνη. Λεωφ. Μαραθώνος 77. Delivery μέσω Wolt, efood & BOX.">
   <meta property="og:title" content="Bun&Run — Smash Burgers & Cocktails">
-  <meta property="og:description" content="Smash burgers that speak… and so much more! Λεωφ. Μαραθώνος 77, Παλλήνη.">
+  <meta property="og:description" content="Ζουμερά smash burgers, fried chicken & cocktails στην Παλλήνη. Πρόλαβέ τα πριν… τρέξουν!">
   <meta property="og:image" content="assets/hero.jpg">
   <link rel="icon" href="assets/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <div class="noise"></div>
 
   <header class="nav" id="nav">
     <a class="nav-logo" href="#top">BUN<span>&</span>RUN</a>
     <nav class="nav-links">
       <a href="#featured">Signature</a>
       <a href="#menu">Μενού</a>
+      <a href="#combos">Combos</a>
       <a href="#cocktails">Cocktails</a>
       <a href="#info">Πού θα μας βρεις</a>
     </nav>
@@ -35,6 +34,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#featured">Signature</a>
     <a href="#menu">Μενού</a>
+    <a href="#combos">Combos</a>
     <a href="#cocktails">Cocktails</a>
     <a href="#info">Πού θα μας βρεις</a>
     <a href="#order" class="btn btn-yellow">Παράγγειλε</a>
@@ -47,31 +47,66 @@
       <div class="hero-bg" id="heroBg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
+
+        <svg class="mascot mascot-hero" viewBox="0 0 220 244" aria-hidden="true">
+          <g class="m-legs">
+            <path class="leg leg-back" d="M92 178 C88 194 78 202 62 209" />
+            <path class="leg leg-front" d="M128 178 C134 194 135 208 129 220 L149 222" />
+          </g>
+          <g class="m-body">
+            <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
+            <circle class="m-seed" cx="78" cy="62" r="3.2"/>
+            <circle class="m-seed" cx="112" cy="50" r="3.2"/>
+            <circle class="m-seed" cx="146" cy="64" r="3.2"/>
+            <circle class="m-seed" cx="96" cy="78" r="3.2"/>
+            <circle class="m-seed" cx="132" cy="80" r="3.2"/>
+            <path class="m-line" d="M30 116 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0" />
+            <rect class="m-line" x="26" y="130" width="168" height="14" rx="7" />
+            <rect class="m-line" x="34" y="158" width="152" height="18" rx="9" />
+          </g>
+          <g class="m-speed">
+            <line x1="-2" y1="120" x2="-34" y2="120" />
+            <line x1="-8" y1="146" x2="-48" y2="146" />
+            <line x1="-2" y1="172" x2="-30" y2="172" />
+          </g>
+        </svg>
+
         <p class="hero-kicker reveal">Παλλήνη · Λεωφ. Μαραθώνος 77</p>
         <h1 class="hero-title">
           <span class="line"><span>SMASH</span></span>
           <span class="line"><span>BURGERS</span></span>
           <span class="line"><span class="yellow">&amp; COCKTAILS</span></span>
         </h1>
-        <p class="hero-sub reveal">Smash burgers that speak… and so much more!</p>
+        <p class="hero-sub reveal">Ζουμερά smash burgers, fried chicken &amp; signature cocktails.<br>
+        <strong>Πρόλαβέ τα πριν… τρέξουν!</strong></p>
         <div class="hero-ctas reveal">
           <a class="btn btn-yellow" href="#order">Παράγγειλε τώρα</a>
           <a class="btn btn-ghost" href="#menu">Δες το μενού</a>
-        </div>
-        <div class="hero-rating reveal">
-          <span class="score">8.8</span>
-          <span class="outof">/10 στο Wolt</span>
         </div>
       </div>
       <div class="hero-scroll">scroll<span class="hero-scroll-line"></span></div>
     </section>
 
     <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
-        <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
-        <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
+          <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
+          <span>SMASH BURGERS</span><i>●</i><span>FRIED CHICKEN</span><i>●</i><span>COCKTAILS</span><i>●</i><span>LOADED FRIES</span><i>●</i>
+        </div>
+        <svg class="mascot runner" viewBox="0 0 220 244" aria-hidden="true">
+          <g class="m-legs">
+            <path class="leg leg-back" d="M92 178 C88 194 78 202 62 209" />
+            <path class="leg leg-front" d="M128 178 C134 194 135 208 129 220 L149 222" />
+          </g>
+          <g class="m-body">
+            <path class="m-line" d="M32 98 Q32 30 110 30 Q188 30 188 98 Z" />
+            <path class="m-line" d="M30 116 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0 q10 -14 20 0 q10 14 20 0" />
+            <rect class="m-line" x="26" y="130" width="168" height="14" rx="7" />
+            <rect class="m-line" x="34" y="158" width="152" height="18" rx="9" />
+          </g>
+        </svg>
       </div>
     </div>
 
@@ -85,7 +120,7 @@
         <article class="card reveal">
           <div class="card-img"><img src="assets/the-bun.jpg" alt="The Bun burger" loading="lazy"></div>
           <div class="card-body">
-            <div class="card-top"><h3>The Bun</h3><span class="price">€11.50</span></div>
+            <div class="card-top"><h3>The Bun</h3><span class="price">€9.50</span></div>
             <p>Δύο smashed burgers, κρέμα μανιταριών με παρμεζάνα, καραμελωμένα κρεμμύδια, σάλτσα Sailor Jerry, ντομάτα.</p>
             <span class="tag">House special</span>
           </div>
@@ -93,7 +128,7 @@
         <article class="card reveal">
           <div class="card-img"><img src="assets/truffle-goat.jpg" alt="Truffle G.O.A.T. burger" loading="lazy"></div>
           <div class="card-body">
-            <div class="card-top"><h3>Truffle G.O.A.T.</h3><span class="price">€10.50</span></div>
+            <div class="card-top"><h3>Truffle G.O.A.T.</h3><span class="price">€8.50</span></div>
             <p>Δύο smashed burgers, κατσικίσιο τυρί, μαγιονέζα τρούφας, ρόκα και καραμελωμένα κρεμμύδια.</p>
             <span class="tag">G.O.A.T. 🐐</span>
           </div>
@@ -101,7 +136,7 @@
         <article class="card reveal">
           <div class="card-img"><img src="assets/oklahoma.jpg" alt="Oklahoma burger" loading="lazy"></div>
           <div class="card-body">
-            <div class="card-top"><h3>Oklahoma</h3><span class="price">€9.50</span></div>
+            <div class="card-top"><h3>Oklahoma</h3><span class="price">€7.50</span></div>
             <p>Δύο smashed burgers με κρεμμύδια, τσένταρ, μπέικον, πίκλα, σάλτσα μπέργκερ, ντομάτα, iceberg.</p>
             <span class="tag">Classic move</span>
           </div>
@@ -116,55 +151,103 @@
         <h2>THE <span class="yellow">MENU</span></h2>
       </div>
 
-      <div class="tabs reveal" id="menuTabs">
-        <button class="tab active" data-tab="burgers">Smashed Burgers</button>
-        <button class="tab" data-tab="chicken">Chicken</button>
-        <button class="tab" data-tab="fries">Fries</button>
-        <button class="tab" data-tab="salads">Salads</button>
-        <button class="tab" data-tab="drinks">Drinks</button>
+      <div class="tabs-wrap" id="tabsWrap">
+        <div class="tabs" id="menuTabs">
+          <button class="tab active" data-tab="burgers">Burgers</button>
+          <button class="tab" data-tab="chicken">Chicken</button>
+          <button class="tab" data-tab="fries">Πατάτες</button>
+          <button class="tab" data-tab="salads">Σαλάτες</button>
+          <button class="tab" data-tab="sauces">Sauces</button>
+          <button class="tab" data-tab="drinks">Ποτά</button>
+        </div>
       </div>
 
-      <div class="menu-panels">
+      <div class="menu-panels" id="menuPanels">
         <div class="panel active" data-panel="burgers">
-          <div class="menu-item reveal"><img src="assets/cheeseburger.jpg" alt="" loading="lazy"><div><h4>Cheeseburger <span class="price">€8.30</span></h4><p>Δύο smashed burgers, τσένταρ, μαγιονέζα με σχοινόπρασο, πίκλα αγγουριού, κρεμμύδι.</p></div></div>
-          <div class="menu-item reveal"><img src="assets/oklahoma.jpg" alt="" loading="lazy"><div><h4>Oklahoma Burger <span class="price">€9.50</span></h4><p>Δύο smashed burgers με κρεμμύδια, τσένταρ, μπέικον, πίκλα, σάλτσα μπέργκερ, ντομάτα, iceberg.</p></div></div>
-          <div class="menu-item reveal"><img src="assets/truffle-goat.jpg" alt="" loading="lazy"><div><h4>Truffle G.O.A.T. Burger <span class="price">€10.50</span></h4><p>Δύο smashed burgers, κατσικίσιο τυρί, μαγιονέζα τρούφας, ρόκα, καραμελωμένα κρεμμύδια.</p></div></div>
-          <div class="menu-item reveal"><img src="assets/the-bun.jpg" alt="" loading="lazy"><div><h4>The Bun <span class="price">€11.50</span></h4><p>Δύο smashed burgers, κρέμα μανιταριών με παρμεζάνα, καραμελωμένα κρεμμύδια, σάλτσα Sailor Jerry, ντομάτα.</p></div></div>
-          <div class="menu-item reveal"><img src="assets/beerger.jpg" alt="" loading="lazy"><div><h4>Smashed Μπεεε-rger <span class="price">€9.50</span></h4><p>Δύο smashed burgers από πρόβατο, σάλτσα romesco, ντομάτα, κατσικίσιο τυρί, πίκλα κρεμμυδιού.</p></div></div>
-          <div class="menu-item reveal no-img"><div><h4>Smoky Bacon Jam <span class="price">€11.50</span></h4><p>Δύο smashed μπιφτέκια, δύο φέτες τσένταρ, πίκλες, ντομάτα, μαρμελάδα μπέικον, καπνιστή μαγιονέζα, αυγό.</p></div></div>
-          <div class="menu-item reveal no-img"><div><h4>The Spice Bee 🌶️ <span class="price">€11.50</span></h4><p>Δύο smashed μπιφτέκια, τσένταρ, coleslaw, πίκλες jalapeño, τηγανητά κρεμμύδια, hot honey και spicy mayo.</p></div></div>
+          <div class="menu-item reveal"><img src="assets/cheeseburger.jpg" alt="" loading="lazy"><div><h4>Cheeseburger <span class="price">€6.90</span></h4><p>Δύο smashed burgers, δύο φέτες τσένταρ, μαγιονέζα με σχοινόπρασο, πίκλα αγγουριού, κρεμμύδι.</p></div></div>
+          <div class="menu-item reveal"><img src="assets/oklahoma.jpg" alt="" loading="lazy"><div><h4>Oklahoma Burger <span class="price">€7.50</span></h4><p>Δύο smashed burgers με κρεμμύδια, τσένταρ, μπέικον, πίκλα, σάλτσα μπέργκερ, ντομάτα, iceberg.</p></div></div>
+          <div class="menu-item reveal"><img src="assets/truffle-goat.jpg" alt="" loading="lazy"><div><h4>Truffle G.O.A.T. Burger <span class="price">€8.50</span></h4><p>Δύο smashed burgers, κατσικίσιο τυρί, μαγιονέζα τρούφας, ρόκα, καραμελωμένα κρεμμύδια.</p></div></div>
+          <div class="menu-item reveal"><img src="assets/the-bun.jpg" alt="" loading="lazy"><div><h4>The Bun <span class="price">€9.50</span></h4><p>Δύο smashed burgers, κρέμα μανιταριών με παρμεζάνα, καραμελωμένα κρεμμύδια, σάλτσα Sailor Jerry, ντομάτα.</p></div></div>
+          <div class="menu-item reveal"><img src="assets/beerger.jpg" alt="" loading="lazy"><div><h4>Smashed Μπεεε-rger <span class="price">€7.90</span></h4><p>Δύο smashed burgers από πρόβατο, σάλτσα romesco, ντομάτα, κατσικίσιο τυρί, πίκλα κρεμμυδιού.</p></div></div>
+          <div class="menu-item reveal no-img"><div><h4>Smoky Bacon Jam <span class="price">€9.50</span></h4><p>Δύο smashed μπιφτέκια, δύο φέτες τσένταρ, πίκλες, ντομάτα, μαρμελάδα μπέικον, καπνιστή μαγιονέζα, αυγό.</p></div></div>
+          <div class="menu-item reveal no-img"><div><h4>The Spice Bee 🌶️ <span class="price">€9.50</span></h4><p>Δύο smashed μπιφτέκια, τσένταρ, coleslaw, πίκλες jalapeño, τηγανητά κρεμμύδια, hot honey και spicy mayo.</p></div></div>
+          <div class="menu-item reveal no-img extras"><div><h4>Extras</h4><p>Extra αυγό <span class="inline-price">+€1.00</span> &nbsp;·&nbsp; Extra μπιφτέκι <span class="inline-price">+€1.80</span></p></div></div>
         </div>
 
         <div class="panel" data-panel="chicken">
-          <div class="menu-item"><img src="assets/chicken-parmesan.jpg" alt="" loading="lazy"><div><h4>Chicken Parmesan Burger <span class="price">€9.00</span></h4><p>Τηγανητό κοτόπουλο, καραμελωμένο μπέικον, iceberg, ντομάτα, γλυκιά σάλτσα dijonese, παρμεζάνα.</p></div></div>
-          <div class="menu-item"><img src="assets/buffalo-burger.jpg" alt="" loading="lazy"><div><h4>Buffalo Chicken Burger <span class="price">€9.60</span></h4><p>Τηγανητό κοτόπουλο με γλάσο Buffalo, καραμελωμένο μπέικον, καραμελωμένο κρεμμύδι, ranch, πίκλα.</p></div></div>
-          <div class="menu-item"><img src="assets/chicken-coleslaw.jpg" alt="" loading="lazy"><div><h4>Chicken Coleslaw Burger <span class="price">€9.00</span></h4><p>Τηγανητό κοτόπουλο, σαλάτα coleslaw, παρμεζάνα, σάλτσα του μαγαζιού.</p></div></div>
-          <div class="menu-item"><img src="assets/fried-chicken.jpg" alt="" loading="lazy"><div><h4>Fried Chicken <span class="price">€7.80</span></h4><p>Μερίδα τηγανητό κοτόπουλο με σάλτσα της επιλογής σου.</p></div></div>
-          <div class="menu-item"><img src="assets/buffalo-chicken.jpg" alt="" loading="lazy"><div><h4>Buffalo Glazed Fried Chicken 🌶️ <span class="price">€8.50</span></h4><p>Με ranch sauce.</p></div></div>
-          <div class="menu-item"><img src="assets/teriyaki-chicken.jpg" alt="" loading="lazy"><div><h4>Teriyaki Glazed Fried Chicken <span class="price">€8.50</span></h4><p>Με house sauce.</p></div></div>
+          <div class="menu-item"><img src="assets/chicken-parmesan.jpg" alt="" loading="lazy"><div><h4>Chicken Parmesan Burger <span class="price">€7.50</span></h4><p>Τηγανητό κοτόπουλο, καραμελωμένο μπέικον, iceberg, ντομάτα, γλυκιά σάλτσα dijonese, παρμεζάνα.</p></div></div>
+          <div class="menu-item"><img src="assets/buffalo-burger.jpg" alt="" loading="lazy"><div><h4>Buffalo Chicken Burger 🌶️ <span class="price">€8.00</span></h4><p>Τηγανητό κοτόπουλο με γλάσο Buffalo, καραμελωμένο μπέικον, καραμελωμένο κρεμμύδι, ranch, πίκλα.</p></div></div>
+          <div class="menu-item"><img src="assets/chicken-coleslaw.jpg" alt="" loading="lazy"><div><h4>Chicken Coleslaw Burger <span class="price">€7.50</span></h4><p>Τηγανητό κοτόπουλο, σαλάτα coleslaw, παρμεζάνα, σάλτσα του μαγαζιού.</p></div></div>
+          <div class="menu-item"><img src="assets/fried-chicken.jpg" alt="" loading="lazy"><div><h4>Fried Chicken <span class="price">€6.50</span></h4><p>Μερίδα τηγανητό κοτόπουλο με σάλτσα της επιλογής σου.</p></div></div>
+          <div class="menu-item"><img src="assets/buffalo-chicken.jpg" alt="" loading="lazy"><div><h4>Buffalo Glazed Spicy 🌶️ <span class="price">€7.00</span></h4><p>Τηγανητό κοτόπουλο με γλάσο Buffalo και ranch sauce.</p></div></div>
+          <div class="menu-item"><img src="assets/teriyaki-chicken.jpg" alt="" loading="lazy"><div><h4>Teriyaki Glazed Fried Chicken <span class="price">€7.00</span></h4><p>Τηγανητό κοτόπουλο με γλάσο teriyaki και house sauce.</p></div></div>
         </div>
 
         <div class="panel" data-panel="fries">
-          <div class="menu-item"><img src="assets/fries.jpg" alt="" loading="lazy"><div><h4>Πατάτες Τηγανητές <span class="price">€4.00</span></h4><p>Φρεσκοτηγανισμένες, όπως πρέπει.</p></div></div>
-          <div class="menu-item"><img src="assets/bacon-fries.jpg" alt="" loading="lazy"><div><h4>Bacon Cheddar Drip Fries <span class="price">€7.20</span></h4><p>Καραμελωμένο μπέικον, σάλτσα τσένταρ, τραγανό κρεμμύδι.</p></div></div>
-          <div class="menu-item"><img src="assets/crunch-fries.jpg" alt="" loading="lazy"><div><h4>Chicken Crunch Fries <span class="price">€7.80</span></h4><p>Τηγανητό κοτόπουλο, ranch sauce.</p></div></div>
-          <div class="menu-item"><img src="assets/truffle-fries.jpg" alt="" loading="lazy"><div><h4>Truffle Parmesan Fries <span class="price">€7.20</span></h4><p>Μαγιονέζα τρούφας, παρμεζάνα.</p></div></div>
-          <div class="menu-item no-img"><div><h4>Animal Style Fries <span class="price">€9.60</span></h4><p>Πατάτες τηγανητές, δύο smashed μπιφτέκια, σως τσένταρ, καραμελωμένα κρεμμύδια.</p></div></div>
+          <div class="menu-item"><img src="assets/fries.jpg" alt="" loading="lazy"><div><h4>Πατάτες Τηγανητές <span class="price">€3.00</span></h4><p>Φρεσκοτηγανισμένες, όπως πρέπει.</p></div></div>
+          <div class="menu-item"><img src="assets/bacon-fries.jpg" alt="" loading="lazy"><div><h4>Bacon Cheddar Drip Fries <span class="price">€6.00</span></h4><p>Καραμελωμένο μπέικον, σάλτσα τσένταρ, τραγανό κρεμμύδι.</p></div></div>
+          <div class="menu-item"><img src="assets/truffle-fries.jpg" alt="" loading="lazy"><div><h4>Truffle Parmesan Fries <span class="price">€6.00</span></h4><p>Μαγιονέζα τρούφας, παρμεζάνα.</p></div></div>
+          <div class="menu-item"><img src="assets/crunch-fries.jpg" alt="" loading="lazy"><div><h4>Chicken Crunch Fries <span class="price">€6.50</span></h4><p>Τηγανητό κοτόπουλο, ranch sauce.</p></div></div>
+          <div class="menu-item no-img"><div><h4>Animal Style Fries <span class="price">€8.00</span></h4><p>Πατάτες τηγανητές, δύο smashed μπιφτέκια, σως τσένταρ, καραμελωμένα κρεμμύδια.</p></div></div>
         </div>
 
         <div class="panel" data-panel="salads">
-          <div class="menu-item"><img src="assets/caesar.jpg" alt="" loading="lazy"><div><h4>Σαλάτα Caesar's <span class="price">€9.00</span></h4><p>Iceberg, τηγανητό κοτόπουλο, σάλτσα Caesar, παρμεζάνα, κρουτόν.</p></div></div>
-          <div class="menu-item"><img src="assets/coleslaw.jpg" alt="" loading="lazy"><div><h4>Σαλάτα Coleslaw <span class="price">€7.80</span></h4><p>Λευκό και κόκκινο λάχανο, πράσινο μήλο, σέλερι, καρύδια, χρένο, μαγιονέζα του μαγαζιού, κρουτόν.</p></div></div>
+          <div class="menu-item"><img src="assets/caesar.jpg" alt="" loading="lazy"><div><h4>Caesar's Salad <span class="price">€7.50</span></h4><p>Iceberg, τηγανητό κοτόπουλο, σάλτσα Caesar, παρμεζάνα, κρουτόν.</p></div></div>
+          <div class="menu-item"><img src="assets/coleslaw.jpg" alt="" loading="lazy"><div><h4>Coleslaw Salad <span class="price">€6.50</span></h4><p>Λευκό και κόκκινο λάχανο, πράσινο μήλο, σέλερι, καρύδια, χρένο, μαγιονέζα του μαγαζιού.</p></div></div>
+        </div>
+
+        <div class="panel" data-panel="sauces">
+          <div class="menu-item no-img sauce"><div><h4>Mayo · Ketchup · Μουστάρδα <span class="price">€1.00</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>House Sauce <span class="price">€1.50</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Burger Sauce <span class="price">€1.50</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Buffalo Sauce 🌶️ <span class="price">€1.50</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Chives Mayo <span class="price">€1.50</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Ranch Sauce <span class="price">€1.80</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Truffle Mayo <span class="price">€1.80</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Sweet Dijonese <span class="price">€1.80</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Smoked Mayo <span class="price">€1.80</span></h4></div></div>
+          <div class="menu-item no-img sauce"><div><h4>Spicy Mayo 🌶️ <span class="price">€1.80</span></h4></div></div>
         </div>
 
         <div class="panel" data-panel="drinks">
-          <div class="menu-item no-img"><div><h4>Αναψυκτικά <span class="price">από €2.00</span></h4><p>Coca-Cola, Sprite, Fanta, Σόδα, Τόνικ — 0.33l / 0.5l / 1.5l.</p></div></div>
-          <div class="menu-item no-img"><div><h4>Μπύρες <span class="price">από €2.50</span></h4><p>Άλφα 0.33l, Carlsberg 0.33l.</p></div></div>
-          <div class="menu-item no-img"><div><h4>Νερό Βίκος <span class="price">από €0.60</span></h4><p>0.5l / 1.5l.</p></div></div>
+          <div class="menu-item no-img"><div><h4>Αναψυκτικά</h4><p>330ml <span class="inline-price">€1.50</span> &nbsp;·&nbsp; 500ml <span class="inline-price">€2.00</span> &nbsp;·&nbsp; 1.5L <span class="inline-price">€3.00</span></p></div></div>
+          <div class="menu-item no-img"><div><h4>Μπύρες</h4><p>Κουτί 330ml <span class="inline-price">€2.00</span> &nbsp;·&nbsp; Μπουκάλι 500ml <span class="inline-price">€2.50</span></p></div></div>
+          <div class="menu-item no-img"><div><h4>Cocktail <span class="price">€6.00</span></h4><p>Ρώτησέ μας για τη λίστα της ημέρας.</p></div></div>
+          <div class="menu-item no-img"><div><h4>Signature Cocktail <span class="price">€7.00</span></h4><p>Τα δικά μας specials — δοκίμασε το Pornstar Martini.</p></div></div>
         </div>
       </div>
 
-      <p class="menu-note reveal">* Οι τιμές είναι ενδεικτικές από τις πλατφόρμες delivery και μπορεί να αλλάξουν.</p>
+      <p class="menu-note reveal">* Τιμές καταστήματος. Στις πλατφόρμες delivery οι τιμές ενδέχεται να διαφέρουν.</p>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="combos" id="combos">
+      <div class="combos-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow dark">Value deals</p>
+          <h2>COMBO <span class="outline">OFFERS</span></h2>
+        </div>
+        <div class="combo-grid">
+          <article class="combo-card reveal">
+            <span class="combo-num">01</span>
+            <h3>Combo 1</h3>
+            <ul><li>Cheeseburger</li><li>Πατάτες</li><li>Αναψυκτικό</li></ul>
+            <span class="combo-price">€9.90</span>
+          </article>
+          <article class="combo-card reveal">
+            <span class="combo-num">02</span>
+            <h3>Combo 2</h3>
+            <ul><li>Cheeseburger</li><li>Loaded Fries (2/3)</li><li>Αναψυκτικό</li></ul>
+            <span class="combo-price">€13.00</span>
+          </article>
+          <article class="combo-card reveal">
+            <span class="combo-num">03</span>
+            <h3>Combo 3</h3>
+            <ul><li>Cheeseburger</li><li>Cocktail</li></ul>
+            <span class="combo-price">€12.00</span>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- COCKTAILS -->
@@ -173,12 +256,15 @@
         <div class="cocktails-text reveal">
           <p class="eyebrow">Μετά το burger…</p>
           <h2>COCKTAIL <span class="yellow">TIME</span></h2>
-          <p class="big">Signature cocktails για να συνοδεύσεις το smash σου — στο κατάστημα ή στο σπίτι σου.</p>
+          <p class="big">Cocktails και signature δημιουργίες για να συνοδεύσεις το smash σου — στο κατάστημα ή στο σπίτι σου.</p>
           <div class="cocktail-item">
-            <h4>Pornstar Martini <span class="price">€7.50</span></h4>
-            <p>Το απόλυτο crowd-pleaser.</p>
+            <h4>Cocktail <span class="price">€6.00</span></h4>
+            <p>Κλασικές επιλογές, φτιαγμένες σωστά.</p>
           </div>
-          <p class="muted">…και ακόμα περισσότερα στο κατάστημα. Ρώτησέ μας!</p>
+          <div class="cocktail-item">
+            <h4>Signature Cocktail <span class="price">€7.00</span></h4>
+            <p>Δοκίμασε το Pornstar Martini — το απόλυτο crowd-pleaser.</p>
+          </div>
         </div>
         <div class="cocktails-img reveal">
           <img src="assets/cocktail.jpg" alt="Cocktail" loading="lazy">
@@ -191,24 +277,33 @@
       <div class="section-head reveal">
         <p class="eyebrow">Πεινάς;</p>
         <h2>ΠΑΡΑΓΓΕΙΛΕ <span class="yellow">ΤΩΡΑ</span></h2>
-        <p class="sub">Delivery & takeaway μέσα από τις αγαπημένες σου πλατφόρμες.</p>
+        <p class="sub">Delivery &amp; takeaway μέσα από τις αγαπημένες σου πλατφόρμες — ή με ένα τηλέφωνο.</p>
       </div>
       <div class="order-grid">
         <a class="order-card reveal" href="https://wolt.com/en/grc/athens/restaurant/bun-and-run" target="_blank" rel="noopener">
-          <span class="order-name wolt">Wolt</span>
+          <img class="order-logo" src="assets/wolt-logo.png" alt="Wolt">
+          <span class="order-name">Wolt</span>
           <span class="order-go">Παράγγειλε →</span>
         </a>
         <a class="order-card reveal" href="https://www.e-food.gr/delivery/pallini/bun-kai-run-8785039" target="_blank" rel="noopener">
-          <span class="order-name efood">efood</span>
+          <img class="order-logo" src="assets/efood-logo.png" alt="efood">
+          <span class="order-name">efood</span>
           <span class="order-go">Παράγγειλε →</span>
         </a>
         <a class="order-card reveal" href="https://box.gr/delivery/pallini/bun--run" target="_blank" rel="noopener">
-          <span class="order-name box">BOX</span>
+          <img class="order-logo" src="assets/box-logo.png" alt="BOX">
+          <span class="order-name">BOX</span>
           <span class="order-go">Παράγγειλε →</span>
         </a>
         <a class="order-card reveal" href="tel:+302106031310">
-          <span class="order-name phone">☎ 210 603 1310</span>
+          <span class="order-logo order-logo-phone">☎</span>
+          <span class="order-name">210 603 1310</span>
           <span class="order-go">Τηλεφώνησε →</span>
+        </a>
+        <a class="order-card reveal" href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">
+          <img class="order-logo" src="assets/instagram.svg" alt="Instagram">
+          <span class="order-name">@bun_n_run</span>
+          <span class="order-go">Ακολούθησέ μας →</span>
         </a>
       </div>
     </section>
@@ -242,8 +337,8 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="nav-logo" href="#top">BUN<span>&</span>RUN</a>
-      <p>Smash burgers that speak… and so much more!</p>
+      <img class="footer-logo" src="assets/logo.jpg" alt="Bun&Run logo">
+      <p>Smash burgers &amp; cocktails στην Παλλήνη.</p>
       <div class="footer-links">
         <a href="https://www.instagram.com/bun_n_run/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wolt.com/en/grc/athens/restaurant/bun-and-run" target="_blank" rel="noopener">Wolt</a>
